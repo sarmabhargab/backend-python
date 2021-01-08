@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <br>
+        <br>
+    </div>
+    <h3 class="text-white p-3 rounded text-center bg-primary bg-gradient">  User Details</h3>
+
+    <table class="rounded table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>address</th>
+                <th>Email</th>
+                <th>SK</th>
+                <th>Delete Record</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td> {{ user.name }} </td>
+                <td> {{ user.dob }} </td>
+                <td> {{ user.address }} </td>
+                <td> {{ user.email }} </td>
+                <td> {{user.sk}} </td>
+                <td> <a href="/delete/{{user.id}}" class="btn btn-danger">Delete</a></td>
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <a class="btn btn-success" href="/insert"> Insert New Record</a>
+
+</div>
+    {% endblock %}
+

@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <a class="btn btn-success" href="/">Home</a>
+
+            </div>
+            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-sm-12 col-lg-6">
+                <h3 class="text-white p-3 rounded text-center bg-primary bg-gradient">  Enter Details</h3>
+                <form class="p-5 border border-5 rounded " action="insert" method="POST">
+                    {% csrf_token %}
+                    Enter Name: <input class="form-control" type="text" placeholder="Enter name" name="name">
+                    <br>
+                    Enter DOB: <input class="form-control" type="date" placeholder="ENter DOB" name="dob">
+                    <br>
+                    Enter Address: <input class="form-control" type="text" placeholder="Enter Address" name="address">
+                    <br>
+                    Enter Email: <input class="form-control" type="email" placeholder="Enter email" name="email">
+                    <br>
+                    <input class="btn btn-primary" type="submit">
+                </form>
+
+                
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+    </div>
+
+    {% endblock %}
