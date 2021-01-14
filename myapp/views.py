@@ -30,6 +30,9 @@ def insert(request):
     return render(request,'home.html')
 
 def delete(request,id):
-    user = Users.objects.get(id=id)
-    user.delete()
+    try:
+        user = Users.objects.get(id=id)
+        user.delete()
+    except Users.DoesNotExist:
+        user = None
     return redirect('/')
