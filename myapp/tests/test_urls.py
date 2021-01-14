@@ -18,6 +18,7 @@ class TestUrls:
         url = reverse('delete',args=[5])
         print(resolve(url))
         assert resolve(url).view_name == 'delete'
+# Deprecated:
 
     # def test_home_urls_is_resolves(self):
     #     url = reverse('home')
