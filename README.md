@@ -1,8 +1,9 @@
 # backend-python
 simple Django application to perform insert and delete operation on records from database
 
-Site Link: 
-[a link](https://bhargab-myapp.herokuapp.com/)
+ 
+[Site Link](https://bhargab-myapp.herokuapp.com/)
+
 Records from database: 
 ![alt text](https://github.com/sarmabhargab/backend-python/blob/master/Screenshot%20from%202021-01-08%2013-24-59.png?raw=true)
 
